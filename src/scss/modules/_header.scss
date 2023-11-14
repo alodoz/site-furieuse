@@ -4,11 +4,22 @@
 }
 
 .image-title {
-  background-color: grey;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 236, 255, 0.6055015756302521) 77%,
+    rgba(0, 0, 0, 1) 94%
+  );
   height: 1180px;
   width: 100%;
 }
 
-header {
-  padding: 0px 150px;
+header a {
+  color: #f6f6f6;
+  font-family: Marvin;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  margin: 20px 40px;
 }
