@@ -1,5 +1,9 @@
-.card {
-  height: 1019;
+.card-section {
+  overflow: hidden;
+  position: relative;
+}
+
+#card-animation {
   width: 100%;
-  background-color: purple;
+  height: auto;
 }
