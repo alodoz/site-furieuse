@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".card-section",
       start: "top top",
-      end: "top+=5000",
+      end: "top+=6000",
       scrub: 2,
       //   markers: true,
       pin: true,
@@ -54,24 +54,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   tl.to(cardAnimation, {
-    duration: 1,
-    scale: 2,
+    duration: 2,
+    scale: 2.5,
     x: 650,
     y: 200,
     ease: "power2.out",
   })
     .to(cardAnimation, {
-      duration: 1,
-      scale: 2,
+      duration: 2,
+      scale: 2.5,
       x: -180,
       y: 400,
       ease: "power2.out",
     })
     .to(cardAnimation, {
-      duration: 1,
-      scale: 2,
+      duration: 2,
+      scale: 2.5,
       x: -400,
       y: -600,
       ease: "power2.out",
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Simulate content loading for 2 seconds
+  setTimeout(function () {
+    // Get the loading container
+    const loadingContainer = document.querySelector(".loading-container");
+
+    // Add a fade-out effect
+    loadingContainer.style.transition = "opacity 1s ease-out";
+    loadingContainer.style.opacity = "0";
+
+    // Hide the loading container after the fade-out effect
+    setTimeout(function () {
+      loadingContainer.style.display = "none";
+
+      // Show the main content
+      document.querySelector(".main-content").style.display = "block";
+    }, 1000); // Adjust the duration of the fade-out effect
+  }, 3000);
 });

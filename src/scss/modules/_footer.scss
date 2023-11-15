@@ -31,7 +31,8 @@ article {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: black;
+  background-color: #1c1c1c;
+  margin-bottom: 100px;
 }
 
 .image-book {
@@ -60,4 +61,57 @@ article {
 article img {
   padding-right: 155px;
   height: 600px;
+}
+
+.dargaud-social {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dargaud-social p {
+  color: #f6f6f6;
+  font-family: Indivisible;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h3 {
+  color: #f6f6f6;
+  font-family: Marvin;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+span {
+  color: #f6f6f6;
+  font-family: Indivisible;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.container-contact {
+  display: flex;
+  flex-direction: row;
+  background-color: #d01f3d;
+}
+
+.about ul {
+  margin-top: 5px;
+  color: #f6f6f6;
+  font-family: Indivisible;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
 }
