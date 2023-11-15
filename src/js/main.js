@@ -35,6 +35,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 //   },
 // });
 
+// marche ////////////////////////////
+
 document.addEventListener("DOMContentLoaded", function () {
   const cardAnimation = document.getElementById("card-animation");
 
@@ -45,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: ".card-section",
       start: "top top",
       end: "top+=5000",
-      scrub: 1,
-      markers: true,
+      scrub: 2,
+      //   markers: true,
       pin: true,
     },
   });
@@ -54,22 +56,22 @@ document.addEventListener("DOMContentLoaded", function () {
   tl.to(cardAnimation, {
     duration: 1,
     scale: 2,
-    x: 200,
+    x: 650,
     y: 200,
     ease: "power2.out",
   })
     .to(cardAnimation, {
       duration: 1,
       scale: 2,
-      x: 800,
-      y: 200,
+      x: -180,
+      y: 400,
       ease: "power2.out",
     })
     .to(cardAnimation, {
       duration: 1,
       scale: 2,
-      x: 300,
-      y: 200,
+      x: -400,
+      y: -600,
       ease: "power2.out",
     });
 });
