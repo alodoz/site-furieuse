@@ -2,41 +2,6 @@
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// const tmln = gsap.timeline();
-
-// gsap.to("#card-animation", {
-//   scrollTrigger: {
-//     trigger: "card-section",
-//     start: "top top",
-//     end: "top=+5000",
-//     scrub: 2,
-//   },
-// });
-
-// tmln.set("#card-animation", {
-//   x: 0,
-//   y: 0,
-//   scrollTrigger: {
-//     trigger: "card-section",
-//     start: "top top",
-//     end: "top=+5000",
-//     scrub: 2,
-//   },
-// });
-
-// tmln.to("#card-animation", {
-//   x: 120,
-//   y: 200,
-//   scrollTrigger: {
-//     trigger: "card-section",
-//     start: "top top",
-//     end: "top=+5000",
-//     scrub: 2,
-//   },
-// });
-
-// marche ////////////////////////////
-
 document.addEventListener("DOMContentLoaded", function () {
   const cardAnimation = document.getElementById("card-animation");
 
@@ -59,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     x: 650,
     y: 200,
     ease: "power2.out",
+    scrub: 2,
   })
     .to(cardAnimation, {
       duration: 2,
@@ -66,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       x: -180,
       y: 400,
       ease: "power2.out",
+      scrub: 2,
     })
     .to(cardAnimation, {
       duration: 2,
@@ -73,25 +40,101 @@ document.addEventListener("DOMContentLoaded", function () {
       x: -400,
       y: -600,
       ease: "power2.out",
+      scrub: 2,
     });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Simulate content loading for 2 seconds
   setTimeout(function () {
-    // Get the loading container
     const loadingContainer = document.querySelector(".loading-container");
 
-    // Add a fade-out effect
     loadingContainer.style.transition = "opacity 1s ease-out";
     loadingContainer.style.opacity = "0";
 
-    // Hide the loading container after the fade-out effect
     setTimeout(function () {
       loadingContainer.style.display = "none";
 
-      // Show the main content
       document.querySelector(".main-content").style.display = "block";
-    }, 1000); // Adjust the duration of the fade-out effect
-  }, 3000);
+    }, 1000);
+  }, 1000);
 });
+
+gsap.to("#ysa-run", {
+  x: 550,
+  scrollTrigger: {
+    trigger: ".card-section",
+    start: "top+=2000",
+    end: "top+=6000",
+    scrub: 0.5,
+  },
+});
+
+gsap.to("#baron-cheval", {
+  x: 470,
+  scrollTrigger: {
+    trigger: ".card-section",
+    start: "top+=2500",
+    end: "top+=6000",
+    scrub: 0.5,
+  },
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  "#baron-cheval",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 2,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".card-section",
+      start: "top+=2500",
+      end: "+=400",
+      scrub: true,
+    },
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  "#ysa-run",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 2,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".card-section",
+      start: "top+=2000",
+      end: "+=400",
+      scrub: true,
+    },
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  "#chase-bar",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 2,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".card-section",
+      start: "top+=1300",
+      end: "+=700",
+      scrub: true,
+    },
+  }
+);

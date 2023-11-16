@@ -2,9 +2,31 @@
   overflow: hidden;
   position: relative;
   background-color: #f78e55;
+  z-index: 1;
+}
+
+.chase {
+  position: relative;
+  top: -22%;
+  left: 25%;
+  z-index: 2;
+}
+
+.chase img {
+  height: 100px;
+}
+
+.chase-bar {
+  width: 600px;
+  margin-left: 5%;
 }
 
 #card-animation {
   width: 100%;
   height: auto;
+}
+
+#ysa-run {
+  position: relative;
+  left: -100px;
 }
