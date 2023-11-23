@@ -20,25 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tl.to(cardAnimation, {
     duration: 2,
-    scale: 2.5,
-    x: 650,
-    y: 200,
+    // scale: 2.5,
+    // x: 650,
+    // y: 200,
     ease: "power2.out",
     scrub: 2,
   })
     .to(cardAnimation, {
       duration: 2,
-      scale: 2.5,
-      x: -180,
-      y: 400,
+      //   scale: 2.5,
+      //   x: -180,
+      //   y: 400,
       ease: "power2.out",
       scrub: 2,
     })
     .to(cardAnimation, {
       duration: 2,
-      scale: 2.5,
-      x: -400,
-      y: -600,
+      //   scale: 2.5,
+      //   x: -800,
+      //   y: -600,
       ease: "power2.out",
       scrub: 2,
     });
@@ -63,7 +63,7 @@ gsap.to("#ysa-run", {
   x: 550,
   scrollTrigger: {
     trigger: ".card-section",
-    start: "top+=2000",
+    start: "top+=1800",
     end: "top+=6000",
     scrub: 0.5,
   },
@@ -112,7 +112,7 @@ gsap.fromTo(
     ease: "power2.inOut",
     scrollTrigger: {
       trigger: ".card-section",
-      start: "top+=2000",
+      start: "top+=1800",
       end: "+=400",
       scrub: true,
     },
@@ -138,3 +138,80 @@ gsap.fromTo(
     },
   }
 );
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  "#img-bouton-1",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 2,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".card-section",
+      start: "top+=1300",
+      end: "+=800",
+      scrub: true,
+    },
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  "#img-bouton-2",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 2,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".card-section",
+      start: "top+=2700",
+      end: "+=800",
+      scrub: true,
+    },
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  "#img-bouton-3",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: ".card-section",
+      start: "top+=4800",
+      end: "+=800",
+      scrub: true,
+    },
+  }
+);
+
+const path = document.querySelector("#trace");
+const length = path.getTotalLength();
+path.style.strokeDasharray = length;
+path.style.strokeDashoffset = length;
+
+gsap.to("#trace", {
+  strokeDashoffset: 0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".card-section",
+    start: "top+=1500",
+    end: "top+=6000",
+    scrub: true,
+    // markers: true,
+  },
+});

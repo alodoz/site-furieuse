@@ -12,6 +12,20 @@
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
+    <script>
+      function openPopup(imageNumber) {
+        const popup = document.getElementById("popup");
+        const popupImage = popup.querySelector("img");
+
+        popupImage.src = `img/image-story-${imageNumber}.png`;
+
+        popup.style.display = "block";
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
     <div class="loading-container">
       <div class="dots-container">
         <div class="dots"></div>
@@ -33,8 +47,6 @@
       </nav>
     </header>
     <div class="card-section">
-      <img id="card-animation" src="img/card.jpg" alt="card-furieuse" />
-      <!-- <img id="card-animation" src="img/trace.svg" alt="" /> -->
       <div class="chase">
         <img
           id="baron-cheval"
@@ -45,6 +57,49 @@
         <div class="chase-bar">
           <img id="chase-bar" src="img/chase-bar.svg?as=webp" alt="chase-bar" />
         </div>
+      </div>
+      <div id="card-animation">
+        <img id="card-image" src="img/card.jpg" alt="card-furieuse" />
+
+        <img
+          onclick="openPopup(1)"
+          id="img-bouton-1"
+          src="img/img-bouton-1.png?as=webp"
+          alt="castle"
+        />
+        <img
+          onclick="openPopup(2)"
+          id="img-bouton-2"
+          src="img/img-bouton-2.png?as=webp"
+          alt=""
+        />
+        <img
+          onclick="openPopup(3)"
+          id="img-bouton-3"
+          src="img/img-bouton-3.png?as=webp"
+          alt=""
+        />
+
+        <div class="popup" id="popup">
+          <span onclick="closePopup()">X</span>
+          <img src="img/image-story-1.png" alt="" />
+        </div>
+        <svg
+          class="trace"
+          xmlns="http://www.w3.org/2000/svg"
+          width="2493"
+          height="1429"
+          viewBox="0 0 2493 1429"
+          fill="none"
+        >
+          <path
+            id="trace"
+            d="M12.91 250.64C12.91 250.64 9.77999 258.67 9.00999 270.19C5.22999 294.28 23.61 316.38 23.61 316.38C28.47 322.04 34.81 327.4 43.03 332.16C93.54 361.4 82.9 372.03 77.59 411.91C72.27 451.78 88.22 459.76 160 481.02C231.78 502.28 348.74 449.12 380.63 430.51C412.53 411.9 431.14 422.54 455.06 425.19C478.98 427.85 553.42 406.58 561.39 380C569.36 353.42 572.02 329.49 548.1 289.62C527.23 254.84 568.39 257.81 579.24 259.14C581.16 259.37 583.09 259.22 584.95 258.7C591.34 256.92 605.58 251.94 611 241.77C618.09 228.48 725.3 243.54 765.18 239.11C805.06 234.68 917.59 219.17 940.18 196.58C962.78 173.98 966.76 116.83 990.69 87.5902C1014.61 58.3502 1025.25 42.4002 1106.32 42.4002C1187.39 42.4002 1215.31 61.0102 1259.17 42.4002C1303.03 23.7902 1305.69 13.1602 1349.55 9.17016C1393.41 5.18016 1455.88 18.4702 1487.78 64.9902C1519.68 111.51 1511.7 96.8902 1528.98 120.81C1546.26 144.73 1558.22 156.7 1604.74 179.29C1651.26 201.89 1738.98 201.89 1778.86 208.53C1802.48 212.47 1831.23 221.53 1850.75 228.27C1861.6 232.02 1864.24 246.21 1855.4 253.53C1837.62 268.28 1807.51 287.7 1769.56 290.93C1707.09 296.25 1623.36 278.97 1579.5 274.98C1535.64 270.99 1378.8 286.94 1357.54 329.47C1336.27 372 1373.49 386.62 1414.69 398.58C1455.89 410.54 1592.79 455.73 1630.01 508.9C1667.23 562.07 1669.88 568.71 1676.53 624.53C1683.18 680.35 1879 748.58 2061.53 729.09C2244.06 709.6 2245.84 727.32 2258.24 748.58C2270.65 769.85 2299 755.67 2316.72 768.07C2334.44 780.47 2322.04 787.56 2352.16 792.88C2382.29 798.2 2387.6 784.02 2421.27 799.97C2454.94 815.92 2458.49 799.97 2476.21 807.06C2493.93 814.15 2486.84 844.28 2408.87 874.4C2330.9 904.52 2258.24 908.07 2201.53 948.83C2144.82 989.59 2114.69 1026.81 2024.31 1021.49C1933.93 1016.17 1937.47 1023.26 1916.21 1049.84C1894.94 1076.42 1884.31 1101.23 1886.08 1161.49C1887.85 1221.74 1930.38 1299.72 1960.51 1335.16C1978.63 1356.48 2025.61 1382.93 2060.17 1400.62L2082.43 1411.75C2093.46 1417.09 2100.52 1420.28 2100.52 1420.28"
+            stroke="#D01F3D"
+            stroke-width="17"
+            stroke-miterlimit="10"
+          />
+        </svg>
       </div>
     </div>
     <footer>
@@ -71,14 +126,25 @@
         <div class="container-contact">
           <div class="dargaud-social">
             <div>
-              <img src="img/dargaud-logo.png?as=webp" alt="dargaud-logo" />
+              <img
+                id="logo-dargaud"
+                src="img/dargaud-logo.png?as=webp"
+                alt="dargaud-logo"
+              />
             </div>
-            <div>
+            <div class="logo-social">
               <a href=""
-                ><img src="img/instagram.svg" alt="logo-instagram"
+                ><img
+                  id="instagram"
+                  src="img/instagram.svg"
+                  alt="logo-instagram"
               /></a>
-              <a href=""><img src="img/facebook.svg" alt="logo-facebook" /></a>
-              <a href=""><img src="img/x-twitter-1.svg" alt="logo-x" /></a>
+              <a href=""
+                ><img id="facebook" src="img/facebook.svg" alt="logo-facebook"
+              /></a>
+              <a href=""
+                ><img id="twitter" src="img/x-twitter-1.svg" alt="logo-x"
+              /></a>
             </div>
             <div>
               <p>© Dargaud 2022</p>

@@ -1,15 +1,15 @@
 .card-section {
   overflow: hidden;
-  position: relative;
+  position: absolute;
   background-color: #f78e55;
   z-index: 1;
 }
 
 .chase {
-  position: relative;
-  top: -22%;
-  left: 25%;
-  z-index: 2;
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  z-index: 999;
 }
 
 .chase img {
@@ -18,10 +18,10 @@
 
 .chase-bar {
   width: 600px;
-  margin-left: 5%;
 }
 
 #card-animation {
+  position: relative;
   width: 100%;
   height: auto;
 }
@@ -29,4 +29,83 @@
 #ysa-run {
   position: relative;
   left: -100px;
+}
+
+#img-bouton-1 {
+  height: 100px;
+  position: absolute;
+  top: 220px;
+  left: 270px;
+  z-index: 2;
+}
+
+#img-bouton-2 {
+  height: 100px;
+  position: absolute;
+  top: 190px;
+  left: 860px;
+  z-index: 2;
+}
+
+#img-bouton-3 {
+  height: 100px;
+  position: absolute;
+  top: 670px;
+  left: 950px;
+  z-index: 2;
+}
+
+.card-section {
+  position: relative;
+  box-shadow: 0px -100px 80px 50px #000000;
+}
+
+.trace {
+  position: absolute;
+  transform: translate(-1310px, 80px);
+  width: 100%;
+  height: auto;
+  scale: 0.65;
+  z-index: 1;
+}
+
+#image-story-1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url("../img/image-story-1.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 9999;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  z-index: 1200;
+  top: 50%;
+  left: 50%;
+  overflow: scroll;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(0 0 0 / 0.3);
+}
+
+.popup span {
+  z-index: 1200;
+  position: sticky;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #f6f6f6;
+  font-size: 70px;
+  background-color: #d01f3d;
+  border-radius: 50px;
+  padding: 0px 15px;
+  margin: 20px 20px 20px 0px;
 }

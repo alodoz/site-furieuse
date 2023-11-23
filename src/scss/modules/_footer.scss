@@ -60,7 +60,7 @@ article {
 }
 
 article img {
-  padding-right: 155px;
+  padding-right: 40px;
   height: 600px;
 }
 
@@ -115,4 +115,30 @@ span {
   font-weight: 400;
   line-height: normal;
   text-decoration-line: underline;
+}
+
+#logo-dargaud {
+  height: 31px;
+  transform: translate(-8px);
+}
+
+.container-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 70px 30px;
+  gap: 100px;
+}
+
+.logo-social {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#instagram {
+  margin-right: 20px;
+}
+
+#facebook {
+  margin-right: 20px;
 }
